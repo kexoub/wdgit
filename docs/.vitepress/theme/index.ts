@@ -7,18 +7,18 @@ import { inBrowser } from 'vitepress'
 import busuanzi from 'busuanzi.pure.js'
 import xgplayer from "./components/xgplayer.vue"
 import backtotop from "./components/backtotop.vue" 
-import MyLayout from './components/MyLayout.vue'
 import DataPanel from "./components/DataPanel.vue"
 import notice from "./components/notice.vue"
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 import { useData, useRoute } from 'vitepress';
 import ArticleMetadata from "./components/ArticleMetadata.vue"
+import DefaultTheme from 'vitepress/theme'
+// import Layout from './Layout.vue'
 
 
 
 export default {
   extends: DefaultTheme,
-  Layout: MyLayout, 
   
   setup() {
   
@@ -85,7 +85,7 @@ export default {
  
   
   
-} satisfies Theme
+}  satisfies Theme;
 
 
   

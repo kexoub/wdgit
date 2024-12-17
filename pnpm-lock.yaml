@@ -14,6 +14,9 @@ importers:
       oh-my-live2d:
         specifier: ^0.19.3
         version: 0.19.3
+      twikoo:
+        specifier: ^1.6.40
+        version: 1.6.40
     devDependencies:
       '@types/dom-view-transitions':
         specifier: ^1.0.5
@@ -1306,6 +1309,9 @@ packages:
 
   ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
+
+  twikoo@1.6.40:
+    resolution: {integrity: sha512-Rl1OZAij95/czD1oiwmTi4Om5yZeKNENqIR7Kq0SygEztV6w2423ac9PHbOXDZPYnvTJB9wqBapS2+AlKFWcfg==}
 
   type@2.7.3:
     resolution: {integrity: sha512-8j+1QmAbPvLZow5Qpi6NCaN8FB60p/6x8/vfNqOk/hC+HuvFZhL4+WfekuhQLiqFZXOgQdrs3B+XxEmCc6b3FQ==}
@@ -2739,6 +2745,8 @@ snapshots:
   trim-lines@3.0.1: {}
 
   ts-interface-checker@0.1.13: {}
+
+  twikoo@1.6.40: {}
 
   type@2.7.3: {}
 
