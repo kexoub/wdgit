@@ -12,8 +12,7 @@ import notice from "./components/notice.vue"
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 import { useData, useRoute } from 'vitepress';
 import ArticleMetadata from "./components/ArticleMetadata.vue"
-import DefaultTheme from 'vitepress/theme'
-// import Layout from './Layout.vue'
+
 
 
 
@@ -50,10 +49,7 @@ export default {
        'doc-footer-before': () => h(backtotop),
        'layout-top': () => h(notice),
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      
-      
-      
-    })
+      })
     
     
     
@@ -62,9 +58,6 @@ export default {
     app.component('ArticleMetadata' , ArticleMetadata)
     app.component('DataPanel' , DataPanel)
     app.component('xgplayer' , xgplayer)
-   
-    
-    
     // ...
    if (inBrowser) {
       router.onAfterRouteChanged = () => {
