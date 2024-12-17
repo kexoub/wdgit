@@ -7,9 +7,12 @@ import { useData, useRoute } from 'vitepress';
 import ArticleMetadata from "./components/ArticleMetadata.vue"
 //import { useLive2d } from 'vitepress-theme-website'
 
+
+
 export default {
   ...DefaultTheme,
   Layout: MyLayout, 
+  
   
   
   
