@@ -1,9 +1,12 @@
 <!-- .vitepress/theme/MyLayout.vue -->
 
+
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
+import backtotop from "./backtotop.vue"
+import notice from "./components/notice.vue"
 
 const { isDark } = useData()
 
@@ -44,6 +47,8 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 <template>
   <DefaultTheme.Layout>
     <!-- 这里可以插入其他插槽组件 -->
+    <template #doc-footer-before> <backtotop /> </template> //返回置顶
+    <template #layout-top> <backtotop /> </template> //返回置顶
   </DefaultTheme.Layout>
 </template>
 

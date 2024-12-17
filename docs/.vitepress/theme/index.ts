@@ -10,29 +10,57 @@ import backtotop from "./components/backtotop.vue"
 import MyLayout from './components/MyLayout.vue'
 import DataPanel from "./components/DataPanel.vue"
 import notice from "./components/notice.vue"
+import giscusTalk from 'vitepress-plugin-comment-with-giscus';
+import { useData, useRoute } from 'vitepress';
+import ArticleMetadata from "./components/ArticleMetadata.vue"
+
 
 
 export default {
   extends: DefaultTheme,
+  Layout: MyLayout, 
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
-       'layout-top': () => h(notice), 
        'doc-footer-before': () => h(backtotop),
-       Layout: MyLayout, 
+       'layout-top': () => h(notice),
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
+      
+      
+      
     })
+    
+    
+    
   },
   enhanceApp({ app, router, siteData }) {
+    app.component('ArticleMetadata' , ArticleMetadata)
     app.component('DataPanel' , DataPanel)
     app.component('xgplayer' , xgplayer)
+   
+    
     
     // ...
    if (inBrowser) {
       router.onAfterRouteChanged = () => {
         busuanzi.fetch()
+        
       }
+      
     }
   
   }
   
+  build: {
+    target: 'esnext' // 确保构建目标为现代浏览器
+  }
+}
+  
+ 
+  
+  
 } satisfies Theme
+
+
+  
+  
+    

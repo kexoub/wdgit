@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
-
+import timeline from "vitepress-markdown-timeline";
+//import { set_sidebar } from "./utils/auto-gen-sidebar.mjs";	// 改成自己的路径
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/',
@@ -39,18 +40,14 @@ export default defineConfig({
    
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '家', items:[
-      {text: '首页', link: '/'},
-      {text: 'markdown示例', link: '/markdown-examples'}
-      ] },
-      { text: '示例', link: '/markdown-examples' }
+      { text: "家", items:[
+      {text: "首页", link: "/"},
+      {text: "markdown示例", link: "/markdown-examples"},    
+      {text: "关于", link: "/gy"},
+      ], },
+     { text: "markdown示例", link: "/markdown-examples" },
     ],
     
-    
-    
-       
-    
-     
 
     sidebar: [
       {
@@ -58,6 +55,8 @@ export default defineConfig({
         items: [
           { text: 'Markdown 演示', link: '/markdown-examples' },
           { text: 'Runtime API 演示', link: '/api-examples' }
+          
+         
         ]
       },
      {
@@ -68,9 +67,14 @@ export default defineConfig({
         ]
       }
     ],
+    
+ /*   sidebar: { 
+      "/front-end/react": set_sidebar("/front-end/react"),
+      "/backnd/rabbitmq": set_sidebar("/backnd/rabbitmq"),
+      },*/
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/kexoub' }
+      { icon: 'github', link: 'https://github.com/kexoub' },
     ],
     footer: {
     copyright: "版权 @2024 congyu"
