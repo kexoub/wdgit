@@ -2,16 +2,24 @@ import { defineConfig } from 'vitepress'
 import timeline from "vitepress-markdown-timeline";
 //import { set_sidebar } from "./utils/auto-gen-sidebar.mjs";	// 改成自己的路径
 // https://vitepress.dev/reference/site-config
+
 export default defineConfig({
   base: '/',
   cleanUrls:true, //开启纯净链接
+  lang: 'zh-CN', //语言，可选 en-US
   title: "丛雨文档",
   description: "丛雨文档1",
   themeConfig: {
-   
+   darkModeSwitchLabel: '深浅模式',
+   sidebarMenuLabel:'目录', 
    outlineTitle: "文章目录",
    outline: [2, 6],
    logo: 'icon.jpg',
+     //fav图标
+   head: [
+    ['link',{ rel: 'icon', href: '/icon.jpg'}],
+  ],
+  
    //自定义上下页名 
    docFooter: { 
    prev: '上一页', next: '下一页',

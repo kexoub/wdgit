@@ -2,6 +2,7 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import Theme from 'awesome-vitepress-theme'
 import './style.css'
 import { inBrowser } from 'vitepress'
 import busuanzi from 'busuanzi.pure.js'

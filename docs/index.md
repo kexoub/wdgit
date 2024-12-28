@@ -7,7 +7,7 @@ hero:
   text: "丛雨文档"
   tagline: 我伟大的项目标语
   image:
-     src: /background.svg
+     src: /tp.svg
      alt: 背景图片
   actions:
     - theme: brand
